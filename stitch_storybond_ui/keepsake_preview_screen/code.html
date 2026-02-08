@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Keepsake Preview Screen | StoryBond</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                        "cream-soft": "#FFF9F0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c130d] dark:text-white transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Main Content Container -->
+<div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Header with Logo and Banner -->
+<header class="flex flex-col gap-4 mb-6">
+<div class="flex items-center justify-between whitespace-nowrap px-2 py-3">
+<div class="flex items-center gap-3 text-[#1c130d] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-tight">StoryBond</h1>
+</div>
+<button class="flex items-center gap-2 text-sm font-semibold text-primary/80 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                                Back to story
+                            </button>
+</div>
+<!-- Demo Mode Banner -->
+<div class="flex items-center justify-between bg-primary/10 border border-primary/20 rounded-full px-6 py-2.5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span class="text-primary text-sm font-bold tracking-wide">Demo Mode: No payment required</span>
+</div>
+<button class="flex items-center justify-center rounded-full hover:bg-primary/10 p-1 transition-colors">
+<span class="material-symbols-outlined text-primary text-[20px]">close</span>
+</button>
+</div>
+</header>
+<!-- Product Preview Stage -->
+<div class="@container">
+<div class="relative aspect-[16/10] w-full bg-cream-soft dark:bg-white/5 rounded-xl border border-[#f4ece6] dark:border-white/10 flex items-center justify-center p-8 overflow-hidden shadow-sm">
+<div class="w-full h-full max-w-[600px] flex items-center justify-center drop-shadow-2xl">
+<img alt="Storybook Mockup" class="max-w-full max-h-full object-contain" data-alt="Premium hardcover storybook mockup with children characters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ-w_Vza3Nfw362PZU1grrOH7tq4oB9Yxu20qiaZnjWON5B1qEhauQkhTwR37i5PIgzvRndQ-pjhIlxfblDotHbuQZ8sg3Onao4Pj0aylLHkfqmnfbmke7WuQ8jRNgviX2IrB_i5D-nGr0_orFMMp1zbr-k0RWkgiTWeWEu4_F6FQNrd6Y0LLIB5z0bnTcqzaQaelrtOtgxk3TiDepknqxA6UQw79xVkRFm23ECbRqAy6ljhFjK_1Gr_2AA3XlQuZhGOcnXwgdsBJK"/>
+</div>
+<!-- Subtle lighting effect -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none"></div>
+</div>
+</div>
+<!-- Segmented Selector -->
+<div class="flex justify-center px-4 py-8">
+<div class="flex h-12 w-full max-w-md items-center justify-center rounded-full bg-primary/5 dark:bg-white/5 border border-primary/10 p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 transition-all has-[:checked]:bg-white has-[:checked]:text-primary has-[:checked]:shadow-sm text-primary/60 dark:text-white/60 text-sm font-bold">
+<span class="truncate">Storybook</span>
+<input checked="" class="hidden" name="keepsake-type" type="radio" value="Storybook"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 transition-all has-[:checked]:bg-white has-[:checked]:text-primary has-[:checked]:shadow-sm text-primary/60 dark:text-white/60 text-sm font-bold">
+<span class="truncate">Poster</span>
+<input class="hidden" name="keepsake-type" type="radio" value="Poster"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-4 transition-all has-[:checked]:bg-white has-[:checked]:text-primary has-[:checked]:shadow-sm text-primary/60 dark:text-white/60 text-sm font-bold">
+<span class="truncate">Mug</span>
+<input class="hidden" name="keepsake-type" type="radio" value="Mug"/>
+</label>
+</div>
+</div>
+<!-- Product Details -->
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto space-y-4 px-4">
+<h2 class="text-[#1c130d] dark:text-white tracking-tight text-3xl font-bold leading-tight">
+                            The Adventure of Leo: Hardcover Storybook
+                        </h2>
+<p class="text-[#1c130d]/80 dark:text-white/70 text-lg font-normal leading-relaxed">
+                            A beautiful 8x8 premium hardcover book featuring 24 full-color pages of your unique story. 
+                            Printed on high-quality archival paper to last a lifetime, with a durable library-grade binding.
+                        </p>
+</div>
+<!-- CTA Section -->
+<div class="mt-12 mb-20 flex flex-col items-center gap-4">
+<button class="flex min-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/25 hover:bg-primary/90 hover:scale-[1.02] transition-all active:scale-95">
+                            Confirm Keepsake
+                        </button>
+<p class="text-xs font-medium text-[#1c130d]/40 dark:text-white/40 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                            Satisfaction Guaranteed: 100% money back if you don't love it
+                        </p>
+</div>
+<!-- Footer Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-t border-[#f4ece6] dark:border-white/10">
+<div class="flex flex-col items-center text-center p-4">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">local_shipping</span>
+<h4 class="font-bold text-sm">Free Global Shipping</h4>
+<p class="text-xs text-[#1c130d]/60 dark:text-white/60">Delivered to your door in 7-10 days</p>
+</div>
+<div class="flex flex-col items-center text-center p-4">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">eco</span>
+<h4 class="font-bold text-sm">Eco-Friendly Materials</h4>
+<p class="text-xs text-[#1c130d]/60 dark:text-white/60">Recycled paper and soy-based inks</p>
+</div>
+<div class="flex flex-col items-center text-center p-4">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl">auto_awesome</span>
+<h4 class="font-bold text-sm">Premium Quality</h4>
+<p class="text-xs text-[#1c130d]/60 dark:text-white/60">Professionally bound and finished</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

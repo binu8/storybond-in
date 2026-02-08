@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reading Room - StoryBond</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f97415",
+                "background-light": "#FFF9F0",
+                "background-dark": "#23170f",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            transition: all 0.2s ease;
+        }
+        .btn-hover:hover .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            color: #f97415;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c130d] dark:text-[#fcfaf8] min-h-screen selection:bg-primary/30">
+<!-- Distraction-Free Reading Container -->
+<div class="relative flex flex-col w-full overflow-x-hidden">
+<!-- 21:9 Hero Image Spanning Width -->
+<div class="w-full aspect-[21/9] overflow-hidden bg-[#e5e7eb] dark:bg-[#3d2b20]">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Magical forest with a glowing blue dragon under moonlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgJxTNJHe5LGahp0JPu7O7_2NrI67u9l25ICbMgjWj8FS3Q3dmYRXY68aPuCAUwgpVJOaREPGrduZLXTMbKAmys_iwygR_lpIjLQ8PgFTtg3LqV-pry61mjiVo4QKOk8Dn3azrODZH5WRpF5GHM1uRHoTUkeHM6R0odma6fLfqh8kMMh4RHcPDAUzOhe0Ds5WJqgPscrjfaXayW1VfNquMocA0VfKtMH8WqAvT3ElJuTp9XNnAmoXlIqo4C-Q_kOngeUSra47RjG1r");'>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex flex-col items-center px-6 py-16 md:py-24">
+<!-- Content Column restricted to ~700px -->
+<div class="w-full max-w-[700px] flex flex-col">
+<!-- Story Title -->
+<h1 class="text-[#1c130d] dark:text-white tracking-tight text-[32px] font-semibold leading-tight text-center mb-12">
+                    The Midnight Dragon's Secret
+                </h1>
+<!-- Story Text -->
+<div class="space-y-8 text-[18px] font-normal leading-[32px] text-[#2d241e] dark:text-[#e0d6cf]">
+<p>
+                        Once upon a time, in a land where the stars whispered secrets to the trees, there lived a dragon whose scales shimmered like the midnight sky. Unlike other dragons who hoarded gold and silver, this dragon hoarded stories. Every night, as the moon climbed high above the Sleeping Mountains, the dragon would unfurl its wings and glide silently over the villages, listening to the tales told by grandmothers to their grandchildren.
+                    </p>
+<p>
+                        The dragon knew that stories were the most precious treasure in the world, for they had the power to turn fear into courage and sadness into hope. One evening, a small child named Leo climbed to the highest peak, carrying nothing but a tattered book and a heart full of curiosity. He didn't know that he was about to meet the guardian of the world's most beautiful secrets.
+                    </p>
+<p>
+                        As Leo reached the summit, the air grew cool and scented with pine. There, resting upon a flat stone that glowed with ancient runes, was the Midnight Dragon. Its eyes were like twin lanterns, glowing with a soft, amber light. Instead of breathing fire, the dragon exhaled a gentle mist that smelled of old parchment and rain-kissed earth.
+                    </p>
+<p>
+                        "Why have you come so far, little one?" the dragon rumbled, its voice like the low hum of a cello. Leo held out his book. "I have a story that has lost its ending," he whispered. "The pages are blank where the hero finds his way home. I thought maybe you had it in your collection."
+                    </p>
+<p>
+                        The dragon leaned closer, its massive head casting a shadow over the boy. "An ending is not something you find, Leo," the dragon replied. "It is something you grow. Like a seed in the garden of your heart, the ending changes depending on the sun that warms it and the storms it survives."
+                    </p>
+<p>
+                        Leo looked down at the blank pages. For the first time, he noticed they weren't truly empty; they were shimmering with a faint, iridescent light, waiting for the ink of his own experiences. The dragon curled its tail around the boy, and together they watched the stars dance, knowing that every secret worth keeping was one that was eventually shared.
+                    </p>
+</div>
+<!-- Spacer for sticky bar -->
+<div class="h-32"></div>
+</div>
+</main>
+<!-- Sticky Bottom Utility Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-8 pointer-events-none">
+<div class="max-w-[700px] mx-auto w-full pointer-events-auto">
+<div class="bg-white/80 dark:bg-[#2d241e]/90 backdrop-blur-md border border-primary/10 shadow-xl rounded-xl flex items-center justify-between p-4 px-6">
+<!-- Feedback Icons -->
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 transition-colors btn-hover text-[#5e4b3c] dark:text-[#c4b7ad]" title="Like this story">
+<span class="material-symbols-outlined">thumb_up</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 transition-colors btn-hover text-[#5e4b3c] dark:text-[#c4b7ad]" title="Dislike this story">
+<span class="material-symbols-outlined">thumb_down</span>
+</button>
+</div>
+<!-- Primary Action Button -->
+<button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95 flex items-center gap-2">
+                        Preview Gift
+                        <span class="material-symbols-outlined !text-[20px]">card_giftcard</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guided Story Creation - StoryBond</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Inter", sans-serif
+    }
+.custom-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)
+    }
+.custom-select-arrow {
+    appearance: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC-zo7CPeqJaY-_IN62xYL10MLA2V2oOJx7jaa2oa0jL-J4Yr4YoOq4gTFj8l0fVK-s9WZS-8_MOdSOlnkGAz68bo9PnnNg-WNjB7vOZRngST463ErBeVw4I--nBEFC0Chf6699SIZAAjr3bb2V9b5WgSVmyl9iWWNLIRXVy32A4PErdawKLu0eEdPAL-4WWvCOZnKsW6KN6Ajc7NOHpvKSVAAzztfkpwncxEi3NEKpeew64TBxGPrDrZoNAQeQikKX-Oyf6Z17iG-U);
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display">
+<!-- Top Navigation Bar Component -->
+<header class="w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 border-b border-primary/10">
+<div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">auto_stories</span>
+</div>
+<h2 class="text-background-dark dark:text-white text-xl font-extrabold tracking-tight">StoryBond</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-primary/70 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-10 rounded-full border-2 border-primary/20 p-0.5">
+<img alt="User Profile Avatar" class="w-full h-full rounded-full object-cover" data-alt="User profile avatar icon in circular frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbG6zD2QkbjnK-vsDdaXuserZ2q7EGntCugHRgNn5PzVHM05XMUcODjMIYGES2kT2STa3R1DxG2alqkabAw-c2IPsVtxTL9eMwJPUDhE1zYpTHzBEfmFmN6nIVa3B3eqBieRG97ydCshBYMK974WlnjBxKhqDpyLNqJHMkCsnToUmppiW0h1WwqoPQC3kOCRzR8sURZo0rnf3_6eL5LWMFON5sIRGDrHxk9bteZ04e4UDuc2CwwbXLnQkhakKhH-bqkTTwEdYm8q9T"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col items-center px-6 py-12 md:py-20">
+<!-- Header Text Section -->
+<div class="max-w-[640px] w-full mb-10 text-center">
+<h1 class="text-[#1c130d] dark:text-white text-[32px] font-black leading-tight tracking-[-0.033em] mb-3">Create a Story</h1>
+<p class="text-primary/70 dark:text-primary/50 text-lg font-normal leading-normal">Configure the details below to generate a unique magical adventure.</p>
+</div>
+<!-- Central Form Card Component -->
+<div class="max-w-[640px] w-full bg-white dark:bg-[#2d1e15] rounded-xl custom-shadow border border-primary/5 p-8 md:p-10">
+<div class="space-y-8">
+<!-- Child Selection Section -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<label class="text-[#1c130d] dark:text-white text-[18px] font-semibold leading-normal">
+                            Who is this story for?
+                        </label>
+<button class="flex items-center gap-1.5 text-primary text-sm font-bold hover:underline transition-all">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+                            Add New Child
+                        </button>
+</div>
+<div class="relative">
+<select class="custom-select-arrow w-full rounded-lg border border-primary/20 bg-background-light dark:bg-[#1c130d] px-4 py-4 text-[18px] text-[#1c130d] dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option disabled="" selected="" value="">Select a child</option>
+<option value="leo">Leo (5 years old)</option>
+<option value="maya">Maya (3 years old)</option>
+</select>
+</div>
+</section>
+<!-- Prompt Section -->
+<section>
+<div class="flex items-center gap-2 mb-3">
+<label class="text-[#1c130d] dark:text-white text-[24px] font-bold leading-tight">
+                            Tell us about the adventure
+                        </label>
+</div>
+<p class="text-primary/60 dark:text-primary/40 text-sm mb-4">What should happen in the story?</p>
+<textarea class="w-full min-h-[180px] rounded-xl border border-primary/20 bg-background-light dark:bg-[#1c130d] p-5 text-[18px] text-[#1c130d] dark:text-white placeholder:text-primary/30 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="e.g., A brave knight who loves broccoli discovers a dragon who can only breathe bubbles..."></textarea>
+<div class="mt-2 flex justify-end">
+<span class="text-primary/40 text-xs font-medium uppercase tracking-wider">0 / 500 characters</span>
+</div>
+</section>
+<!-- Language Selector Toggle Component -->
+<section>
+<label class="block text-[#1c130d] dark:text-white text-[18px] font-semibold mb-4">
+                        Language
+                    </label>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-primary text-white font-bold ring-2 ring-primary ring-offset-2">
+<span>English</span>
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-background-light dark:bg-[#1c130d] border border-primary/10 text-primary/70 font-medium hover:border-primary/40 transition-all">
+<span>Spanish</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-background-light dark:bg-[#1c130d] border border-primary/10 text-primary/70 font-medium hover:border-primary/40 transition-all">
+<span>French</span>
+</button>
+</div>
+</section>
+<!-- Footer Section with Primary CTA -->
+<div class="pt-6 relative group">
+<!-- Validation Tooltip (subtle popover) -->
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-background-dark text-white text-[12px] py-1 px-3 rounded pointer-events-none whitespace-nowrap">
+                        Please select a child and describe an adventure first
+                    </div>
+<!-- Disabled State Button -->
+<button class="w-full h-16 bg-gray-300 dark:bg-gray-700 cursor-not-allowed text-gray-500 dark:text-gray-400 font-bold text-xl rounded-xl flex items-center justify-center gap-3 transition-all" disabled="">
+<span>Generate Story</span>
+<span class="material-symbols-outlined">auto_fix_high</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Design Variant Note -->
+<p class="mt-8 text-primary/30 text-xs font-medium uppercase tracking-[0.2em]">StoryBond Creator · Variant 1 of 3</p>
+</main>
+<!-- Background Decorative Element -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

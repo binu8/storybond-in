@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reading Room - Error State | StoryBond</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#FFF9F0",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#1c130d] dark:text-[#fcfaf8] min-h-screen">
+<!-- Main Container -->
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Minimal Top Navigation -->
+<header class="flex items-center justify-between px-8 py-6 w-full absolute top-0 left-0">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#1c130d] dark:text-[#fcfaf8] text-xl font-bold tracking-tight">StoryBond</h2>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[#1c130d] dark:text-[#fcfaf8]">close</span>
+</button>
+</header>
+<!-- Centered Error Content -->
+<main class="flex-1 flex items-center justify-center px-6">
+<div class="max-w-[520px] w-full flex flex-col items-center text-center">
+<!-- Whimsical Illustration Area -->
+<div class="mb-10 relative">
+<div class="w-64 h-64 bg-primary/5 dark:bg-primary/10 rounded-full flex items-center justify-center relative overflow-hidden">
+<!-- Abstract Soft Illustration Representative -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40 text-[120px]">auto_stories</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-32 h-40 bg-white dark:bg-[#32241a] rounded-lg shadow-sm flex flex-col items-center justify-center gap-2 border border-primary/10">
+<span class="material-symbols-outlined text-primary/60 text-5xl">search</span>
+<div class="w-12 h-1 bg-primary/20 rounded-full"></div>
+<div class="w-8 h-1 bg-primary/10 rounded-full"></div>
+</div>
+<div class="absolute -right-4 top-1/4 animate-bounce">
+<span class="material-symbols-outlined text-primary text-3xl">question_mark</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Typography -->
+<div class="space-y-4 mb-10">
+<h1 class="text-[#1c130d] dark:text-[#fcfaf8] text-3xl font-bold tracking-tight">
+                        We couldn't load your story
+                    </h1>
+<p class="text-[#4B5563] dark:text-[#a19288] text-lg leading-relaxed max-w-[420px] mx-auto">
+                        Sometimes even the best stories need a second start. Please check your internet connection and try again.
+                    </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col items-center gap-4 w-full sm:w-auto">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center gap-2 min-w-[200px] justify-center">
+<span class="material-symbols-outlined">refresh</span>
+<span>Retry</span>
+</button>
+<button class="text-[#1c130d] dark:text-[#fcfaf8] font-semibold py-3 px-8 rounded-xl hover:bg-primary/5 transition-all text-sm uppercase tracking-widest">
+                        Return to Library
+                    </button>
+</div>
+</div>
+</main>
+<!-- Minimal Footer Branding -->
+<footer class="absolute bottom-8 left-0 w-full flex justify-center">
+<div class="flex items-center gap-2 opacity-30 grayscale pointer-events-none">
+<span class="text-xs font-medium uppercase tracking-[0.2em]">Distraction-Free Reading Mode</span>
+</div>
+</footer>
+</div>
+<!-- Background Decorative Elements (Subtle) -->
+<div class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+</body></html>

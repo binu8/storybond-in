@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryBond - Authentication</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .modal-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-8">
+<!-- Background Overlay Simulating a Dimmed State -->
+<div class="fixed inset-0 bg-background-dark/40 backdrop-blur-sm z-0"></div>
+<!-- Main Authentication Modal -->
+<div class="relative z-10 w-full max-w-[480px] bg-white dark:bg-zinc-900 rounded-xl modal-shadow overflow-hidden">
+<!-- Header / Logo Area -->
+<div class="pt-10 pb-6 flex flex-col items-center gap-2">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">auto_stories</span>
+</div>
+<h1 class="text-2xl font-bold text-zinc-900 dark:text-white">StoryBond</h1>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Magical stories for every child</p>
+</div>
+<!-- Tabs Section -->
+<div class="px-8 border-b border-zinc-100 dark:border-zinc-800">
+<div class="flex gap-8">
+<button class="flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 pt-2 group">
+<span class="text-zinc-900 dark:text-white text-sm font-semibold leading-normal tracking-wide">Login</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent pb-3 pt-2 text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 transition-colors">
+<span class="text-sm font-semibold leading-normal tracking-wide">Sign Up</span>
+</button>
+</div>
+</div>
+<!-- Form Content -->
+<div class="p-8 space-y-5">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-zinc-700 dark:text-zinc-300">Email Address</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Enter your email" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-semibold text-zinc-700 dark:text-zinc-300">Password</label>
+<a class="text-xs font-medium text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Enter your password" type="password"/>
+</div>
+</div>
+<!-- Error Message Placeholder (Visible state shown here as per description) -->
+<div class="flex items-center gap-2 text-[#DC2626] text-sm font-medium">
+<span class="material-symbols-outlined text-lg">error</span>
+<p>The email or password you entered is incorrect.</p>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-12 bg-primary hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors shadow-sm active:scale-[0.98]">
+                Continue
+            </button>
+<!-- Divider -->
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-zinc-100 dark:border-zinc-800"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase">
+<span class="bg-white dark:bg-zinc-900 px-3 text-zinc-400 font-medium tracking-widest">or</span>
+</div>
+</div>
+<!-- Social Button -->
+<button class="w-full h-12 flex items-center justify-center gap-3 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-200 font-medium">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Google colorful brand logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1FJj4_Kt0da2bDk4FwVw2ThrEHAXND-rON3GS7u_lQUsBvZ90Bv3UjqhymdjxXIO1Sk1YJABYaVnLkCZADH0FWr8dUU89Z2sq-sALGTZ4YGBzZSSwGUdHcyZtN_qdHITTBvgsTs7IrIRcv2JUvtTn-VyZKfdHz0hWLBOMhUI9zL1mf-B36B5HGmv2h2ILZtbSJtdUZlubiOtHLXweNaNUmUKtB4FVus4kY4s6xw6uoYNi1TaRbRMmvlHqBKbfY_QPUwMozK-cwfAu"/>
+                Continue with Google
+            </button>
+</div>
+<!-- Footer -->
+<div class="px-8 pb-10 text-center">
+<p class="text-sm text-zinc-500 dark:text-zinc-400">
+                Don't have an account? 
+                <a class="text-primary font-semibold hover:underline" href="#">Create one for free</a>
+</p>
+</div>
+</div>
+<!-- Decorative Illustration Background (Abstract) -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 opacity-10">
+<div class="absolute top-[10%] left-[5%] w-64 h-64 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[10%] right-[5%] w-96 h-96 bg-orange-300 rounded-full blur-[150px]"></div>
+</div>
+</body></html>

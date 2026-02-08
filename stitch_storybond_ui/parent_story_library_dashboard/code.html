@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Parent Story Library Dashboard - StoryBond</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#FFF9F0",
+                        "background-dark": "#23170f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display text-[#1F2937] dark:text-gray-100">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark/50 px-6 md:px-20 py-4 sticky top-0 z-50 backdrop-blur-sm">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+</div>
+<h2 class="text-[#1c130d] dark:text-white text-xl font-bold leading-tight tracking-tight">StoryBond</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="#">Library</a>
+<a class="text-[#6B7280] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Profile</a>
+<a class="text-[#6B7280] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden lg:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#9e6b47] flex border-none bg-primary/5 items-center justify-center pl-4 rounded-l-lg" data-icon="search">
+<span class="material-symbols-outlined text-gray-400">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#1c130d] focus:outline-0 focus:ring-0 border-none bg-primary/5 focus:border-none h-full placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal" placeholder="Search stories..." value=""/>
+</div>
+</label>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar circle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9kdzL6ppzaQp1WQAsmaoLsAU_AcFBGEy490tbiDrBwF6lDaU22m7xyLeWLhnC_FInjlykRZtthTe1h5BXfG7xdv70urs6mjInttRvBVuWRcnLBgMKQn8XWC-dTnq_M_XuIXszD--aR7outENLVZbHigHGVk4H-dNKv3LxlwH9-FHlrAEmMySPOegNVKUnohIurOslGd3keAXQwtkO4bUfQ7idJCZPPT7liKvYv6HRCK2J4Yh2f0HBpLZn70rt51sD-vzr7sJUC0I4");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-6 md:px-20 py-10">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div>
+<h1 class="text-[#1F2937] dark:text-white text-[32px] font-semibold leading-tight">Your Stories</h1>
+<p class="text-[#6B7280] dark:text-gray-400 mt-1">Manage and revisit the magical worlds you've created for your kids.</p>
+</div>
+</div>
+<!-- Story Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cover art of a brave lion in the savanna" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgHSKpBFdqVnWq_T5NaiVNUm1WsA8WNtZQYKegVDIFEQLeHIdFa4GkzI0jpvicLYRx6yG2MZE316SBBsTIt4c0xAgpnoMVXlqT02LfEv-oBlW6_wTorNTxrsrATgWcH_bCSfI2cd4ZzayImfD4AnGYHTtv62m5LWYvd0ocym9QVKI8f2p24u0Cuz80sr8VougcD-WfEAPMPseeShc0amrsh-iOk-9jPwoKxo3_cKnPD0_E1SMt8un6eKFIVIIw8mIeXwrC7583dcBX");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">The Brave Little Lion</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For Leo, 5 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            English
+                        </span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Illustration of a girl floating among stars and the moon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCP6uq2E08lfutrrSZxY7BtwHDgunHdzQgFPpzpIHNY8SYO0pJ8bTRihwFw5F4WebZMpk-EdBGkSKKEZX7NAkecsV1lja0T_fQQRLctxEVx2JHE_inx32AXYOBNxlJV9FkazCYJZ0q9O9L_C5lNx7XAYt9g03FtJ5RIo8ZZy2YN0wYjVqWoMH22iW4CBcEG88gyqgsvfXU-9aLLygc1_aklVzsZtwXy_QU71ytR66NuN-Oq4az9BENZoL2dv2vYwcd9UMXNcvkmszw-");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">Luna’s Moon Adventure</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For Sarah, 3 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            Spanish
+                        </span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="A magical wooden treehouse in a glowing forest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHxztPELLuLfx3V9690FoCAhyvrkbpQCYJwndwv4umK_T0LJQZEJeg0ZfyN3YNpWh61jPtQLTNftkvZ75R2POej2x6h0BcCEdMO11l64_vvsUq61---lwkVKcXaq4BBt69cgBYJjAYAtcrGn4TZ01f8EUrPBH6BxwXGBCoUx08OHTVyum1QBQd1IjScdFG2liMkb4dxN-poI45D0mcjxowDgQYly0tyvH-qqFpKZAKSuTyaV6U6nC9mmVJ_ulZ-SUOH7xplBskIsjA");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">The Magic Treehouse</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For Leo, 5 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            English
+                        </span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Rocket ship traveling through a colorful nebula" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaoVY93N4yBi_gH2bgR3XZFCqfirxa7sY2gra_SV2fVnk5-Slt35J0GqZD--zd1OChQneX4j5mGZPcy_O379e9D9EHv2jJUUR4ydtU7s1WpE_dZZcsBBxkaGlRJYqC6Oyl0taOFHLQg6GkciX-mlc9x7aY-nuaCLnofRbi6-u5Lv1FqyMl6dfvYrgjDFROmJvy_3C4lAkNH3TsYQG34smfll7_0q6MC2QXxlACCUwEl44OD2u0IQilQgH0uSLPdxkToIyVc_OSw66M");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">Space Explorers</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For James, 6 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            French
+                        </span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Friendly sea creatures swimming in a blue ocean" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXik1MtnRSYJXLnqDJ9Nn2UK2uTaFBNDjXLl9Ots2KnQ4jtdHcNONj7KRAfH7YrHaidM9ixr-RpiCwSen0jM21gerQO0_KbkN7PAB6P8SFlYT3--tK-7Dfj7iEYAUibcfq3xiV5hNrFaBRq0i0IY9RjWElmNT4SFZ5MqLdLUDbTZGWHj4q9keIPWcYrWWtxUVdb99tB_sfg8KyKJPg0J81LbXG_d1k7EBgyvk_qCJf5AFu1fKbgmiSBojQn2RlJkaElsNpV1bjPGvz");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">Ocean Friends</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For Emma, 4 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            English
+                        </span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-[#2d1e14] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-primary/5">
+<div class="aspect-video w-full bg-gray-100 overflow-hidden relative">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cute dinosaurs playing near a volcano" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFeLgdDhE3aS-NVJ1Bt2_OSPot1Q4duRWuCf4gibEy7ed8PFXUI_v_cKT6DicabjdxxLKgdgA-3Sc2lmS8pH7xwFUgcjo-HALeJ-E_FsDvobs2bu_491WBsnNCuwtMDGSNeJNXK2zmxtbPO2iTUzEe26U3qkSl9VxIXojVZZcKq1Gjed9PitOjUT1582NkVeyQmzjJ-4K8OZuBW59hsge8NzKKXYlHbW3Xg_ZqbO9I_HgIl78lI3AYuTQxp4AWredtdkhfEZzVyV73");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-[24px] font-semibold text-[#1F2937] dark:text-white leading-tight">Dino Day</h2>
+</div>
+<p class="text-[18px] text-[#6B7280] dark:text-gray-400 mb-4">For Leo, 5 years old</p>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                            English
+                        </span>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-8 right-8 flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white px-6 py-4 rounded-full shadow-lg transition-transform transform hover:scale-105 active:scale-95 z-[60]">
+<span class="material-symbols-outlined font-bold">add</span>
+<span class="text-base font-bold">Create New Story</span>
+</button>
+</div>
+</body></html>

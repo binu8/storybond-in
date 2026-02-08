@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryBond Reading Room - Loading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f97415",
+                "background-light": "#FFF9F0",
+                "background-dark": "#23170f",
+                "skeleton-base": "#e5e1da",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @keyframes shimmer {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        .animate-shimmer {
+            animation: shimmer 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .skeleton-gradient {
+            background: linear-gradient(135deg, #fce7d5 0%, #f97415 50%, #fed7aa 100%);
+            filter: blur(80px);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c130d] selection:bg-primary/30 min-h-screen flex flex-col">
+<div class="fixed top-0 left-0 w-full h-1 bg-primary/10 z-50">
+<div class="h-full bg-primary w-1/3 transition-all duration-500"></div>
+</div>
+<header class="relative z-20 flex items-center justify-between px-10 py-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">book_5</span>
+</div>
+<span class="font-black text-xl tracking-tight text-primary">StoryBond</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<span class="material-symbols-outlined cursor-not-allowed">settings</span>
+<span class="material-symbols-outlined cursor-not-allowed">fullscreen</span>
+</div>
+</header>
+<main class="relative flex-1 flex flex-col items-center justify-center px-4 py-8 overflow-hidden">
+<div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+<div class="skeleton-gradient animate-shimmer w-[150%] h-[150%] absolute"></div>
+<div class="relative z-10 flex flex-col items-center opacity-10">
+<span class="material-symbols-outlined text-[120px]">image</span>
+</div>
+</div>
+<div class="relative z-10 w-full max-w-[850px] bg-white/60 dark:bg-black/40 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-primary/5 p-8 md:p-16 border border-white/40 dark:border-white/10">
+<div class="layout-content-container flex flex-col w-full">
+<div class="mb-12">
+<div class="h-14 w-4/5 bg-skeleton-base/80 dark:bg-primary/20 rounded-xl animate-shimmer mb-4"></div>
+<div class="h-14 w-2/3 bg-skeleton-base/80 dark:bg-primary/20 rounded-xl animate-shimmer"></div>
+</div>
+<div class="space-y-8">
+<div class="space-y-4">
+<div class="h-4 w-full bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[98%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[95%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[97%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-2/3 bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+</div>
+<div class="space-y-4 pt-4">
+<div class="h-4 w-full bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[94%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[99%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-1/2 bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+</div>
+<div class="space-y-4 pt-4">
+<div class="h-4 w-full bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[96%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+<div class="h-4 w-[85%] bg-skeleton-base/70 dark:bg-primary/10 rounded animate-shimmer"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="relative z-20 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-primary/10 px-6 py-4 mt-auto">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 text-primary/40 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="h-6 w-24 bg-skeleton-base/50 rounded-full animate-shimmer"></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-4 w-32 bg-skeleton-base/50 rounded-full animate-shimmer mb-1"></div>
+<div class="w-48 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary/30 w-1/4"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg text-primary/40 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">format_size</span>
+</button>
+<button class="flex items-center justify-center px-6 py-2 bg-primary/30 text-white rounded-full font-bold cursor-not-allowed" disabled="">
+                Next Chapter
+                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</footer>
+<div class="hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#fcfaf8] @[480px]:rounded-lg min-h-80" data-alt="Soft colorful blurred placeholder for loading story illustration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAW8g_XW2BBhDGjlzyNT5FzCR5GLIFmk2H8VVXeoURHpdT1LOOOqX16GEmmXI2UUmTckg81yr2DSpUWdJHa45SzhFnn7QeCGsOIFj0raaD3RXU_EshBe2-WrOf5Qs3qNqPgaYSpAwvTV8xYveOYv9AqAaXORYENvzFrdrT5sBQi6-tTLOWjjQfc2ZYhmfhVKCeqfCBefkKSQZzRRftUuuBDeOwvlK3cXa4SoW9bmjOaWGo62-sf4rt_xk0QDvgiF_V4fndaWHTpCcS7");'></div>
+</div>
+</div>
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<p class="text-[#1c130d] text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Loading story title...</p>
+</div>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Loading the magical story content...</p>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Preparing the next chapter of your adventure...</p>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Almost there, the characters are getting ready...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

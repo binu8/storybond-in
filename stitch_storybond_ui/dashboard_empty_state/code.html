@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryBond - Dashboard Empty State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97415",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#23170f",
+                        "soft-ivory": "#FFF9F0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-soft-ivory text-[#1F2937] min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="w-full bg-white/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4 fixed top-0 z-50">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<!-- Logo Section -->
+<div class="flex items-center gap-3">
+<div class="size-9 bg-primary flex items-center justify-center rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#1F2937]">StoryBond</h1>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="#">My Library</a>
+<a class="text-sm font-medium text-[#1F2937]/70 hover:text-primary transition-colors" href="#">Explore</a>
+<a class="text-sm font-medium text-[#1F2937]/70 hover:text-primary transition-colors" href="#">Drafts</a>
+<a class="text-sm font-medium text-[#1F2937]/70 hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+<!-- User Profile -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#1F2937]/60 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full border-2 border-primary/20 bg-cover bg-center" data-alt="User profile avatar of a smiling man" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBy7g_WYJir0_StBXXHxWw73rkKKLKNMXg080HLHLqweszHCCmW5w3ykwTyNAtNw6sQ6B5t6v9MWV5vIzGz_9IwaR45E9DTKhNT4LVovcN75UqhwOslmx-1QgnjPuY1S1wc0S7zeAiyj6hJSDE4TrIUsWz4Zwg4uBplBcfAEkmP-Q_YFLz_fpPkJcPacO2_49ISjHTzvVeW-Ao_nXT-47hde5mok8ercVOsVLL12T-c4tIZRZjU3gOKvnKdJoH6M_QSfVRQkftRlb6l')">
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area (Empty State) -->
+<main class="flex-grow flex items-center justify-center pt-24 px-6">
+<div class="max-w-2xl w-full flex flex-col items-center text-center">
+<!-- Illustration Container -->
+<div class="relative w-full max-w-sm aspect-square mb-8 flex items-center justify-center">
+<!-- Abstract Soft Background Circles -->
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+<div class="absolute size-64 bg-primary/10 rounded-full blur-2xl"></div>
+<!-- Minimalist Book Illustration -->
+<div class="relative z-10 bg-white p-8 rounded-2xl shadow-xl shadow-primary/5 border border-primary/10">
+<div class="w-48 h-64 bg-primary/5 rounded-lg border-2 border-dashed border-primary/20 flex flex-col items-center justify-center gap-4">
+<span class="material-symbols-outlined text-6xl text-primary/30">add_circle</span>
+<div class="w-32 h-2 bg-primary/10 rounded-full"></div>
+<div class="w-24 h-2 bg-primary/10 rounded-full"></div>
+<div class="w-28 h-2 bg-primary/10 rounded-full"></div>
+</div>
+</div>
+<!-- Floating Sparkles Icons -->
+<div class="absolute top-10 right-10 text-primary opacity-40">
+<span class="material-symbols-outlined text-4xl">auto_awesome</span>
+</div>
+<div class="absolute bottom-10 left-10 text-primary opacity-40">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</div>
+</div>
+<!-- Typography Content -->
+<h2 class="text-3xl md:text-4xl font-bold text-[#1F2937] mb-3">No stories yet. Create your first one.</h2>
+<p class="text-lg text-[#1F2937]/60 mb-10 max-w-md">
+                Begin your journey by crafting a magical tale for your child. Your library is waiting for its first adventure.
+            </p>
+<!-- Primary Call to Action -->
+<button class="group flex items-center gap-3 bg-primary hover:bg-[#e86a13] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined font-bold">add</span>
+<span>Create New Story</span>
+</button>
+<!-- Quick Tips Link -->
+<button class="mt-8 text-sm font-medium text-primary/70 hover:text-primary flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-base">help</span>
+                Need inspiration? Check our story prompts
+            </button>
+</div>
+</main>
+<!-- Footer Stats / Subtle Info -->
+<footer class="py-10 px-6 lg:px-20">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between border-t border-primary/10 pt-8 gap-6">
+<div class="flex items-center gap-8">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-widest text-[#1F2937]/40 font-bold mb-1">Library Usage</span>
+<div class="flex items-center gap-2">
+<div class="w-24 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-xs font-medium text-[#1F2937]/60">0 / 50 Stories</span>
+</div>
+</div>
+<div class="w-px h-8 bg-primary/10 hidden md:block"></div>
+<div class="text-[#1F2937]/60 text-sm">
+                    Premium Member since 2024
+                </div>
+</div>
+<p class="text-[#1F2937]/40 text-sm">© 2024 StoryBond. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

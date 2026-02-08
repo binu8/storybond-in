@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryBond Reading Room - Loading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f97415",
+                "background-light": "#FFF9F0",
+                "background-dark": "#23170f",
+                "skeleton-base": "#e5e1da",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @keyframes shimmer {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        .animate-shimmer {
+            animation: shimmer 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .skeleton-gradient {
+            background: linear-gradient(135deg, #fce7d5 0%, #f97415 50%, #fed7aa 100%);
+            filter: blur(40px);
+            opacity: 0.3;
+        }.custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(249, 116, 21, 0.1);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(249, 116, 21, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c130d] selection:bg-primary/30 overflow-hidden h-screen flex flex-col">
+<div class="fixed top-0 left-0 w-full h-1 bg-primary/10 z-50">
+<div class="h-full bg-primary w-1/3 transition-all duration-500"></div>
+</div>
+<header class="flex items-center justify-between px-10 py-6 shrink-0 z-40">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">book_5</span>
+</div>
+<span class="font-black text-xl tracking-tight text-primary">StoryBond</span>
+</div>
+<div class="flex items-center gap-4 opacity-40">
+<span class="material-symbols-outlined cursor-not-allowed">settings</span>
+<span class="material-symbols-outlined cursor-not-allowed">fullscreen</span>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<div class="w-[45%] flex items-center justify-center p-8 lg:p-12">
+<div class="relative w-full aspect-[4/5] bg-primary/5 rounded-2xl overflow-hidden flex items-center justify-center shadow-xl shadow-primary/5">
+<div class="absolute inset-0 skeleton-gradient animate-shimmer"></div>
+<div class="relative z-10 flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-primary/20 text-7xl">image</span>
+</div>
+</div>
+</div>
+<div class="w-[1px] bg-primary/10 h-[80%] my-auto"></div>
+<div class="flex-1 overflow-y-auto custom-scrollbar px-8 lg:px-20 py-12">
+<div class="max-w-2xl mx-auto">
+<div class="mb-12">
+<div class="h-10 w-4/5 bg-skeleton-base dark:bg-primary/10 rounded-lg animate-shimmer mb-4"></div>
+<div class="h-10 w-2/3 bg-skeleton-base dark:bg-primary/10 rounded-lg animate-shimmer"></div>
+</div>
+<div class="space-y-8">
+<div class="space-y-3">
+<div class="h-4 w-full bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[98%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[95%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[97%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-2/3 bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+</div>
+<div class="space-y-3 pt-4">
+<div class="h-4 w-full bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[94%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[99%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[96%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-1/2 bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+</div>
+<div class="space-y-3 pt-4">
+<div class="h-4 w-full bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[96%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[98%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[92%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[85%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+</div>
+<div class="space-y-3 pt-4">
+<div class="h-4 w-full bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[95%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[97%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+<div class="h-4 w-[40%] bg-skeleton-base/60 dark:bg-primary/5 rounded animate-shimmer"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="shrink-0 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-primary/10 px-10 py-5 z-40">
+<div class="w-full flex items-center justify-between">
+<div class="flex items-center gap-4 w-[45%]">
+<button class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 text-primary/40 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="h-6 w-32 bg-skeleton-base/50 rounded-full animate-shimmer"></div>
+</div>
+<div class="flex-1 flex items-center justify-between pl-8 lg:pl-20">
+<div class="flex flex-col gap-1.5">
+<div class="h-3 w-32 bg-skeleton-base/50 rounded-full animate-shimmer"></div>
+<div class="w-48 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary/30 w-1/4"></div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg text-primary/40 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined">format_size</span>
+</button>
+<button class="flex items-center justify-center px-8 py-2.5 bg-primary/30 text-white rounded-full font-bold cursor-not-allowed text-sm uppercase tracking-wider" disabled="">
+                        Next Chapter
+                        <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<div class="hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#fcfaf8] @[480px]:rounded-lg min-h-80" data-alt="Soft colorful blurred placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAW8g_XW2BBhDGjlzyNT5FzCR5GLIFmk2H8VVXeoURHpdT1LOOOqX16GEmmXI2UUmTckg81yr2DSpUWdJHa45SzhFnn7QeCGsOIFj0raaD3RXU_EshBe2-WrOf5Qs3qNqPgaYSpAwvTV8xYveOYv9AqAaXORYENvzFrdrT5sBQi6-tTLOWjjQfc2ZYhmfhVKCeqfCBefkKSQZzRRftUuuBDeOwvlK3cXa4SoW9bmjOaWGo62-sf4rt_xk0QDvgiF_V4fndaWHTpCcS7");'></div>
+</div>
+</div>
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<p class="text-[#1c130d] text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Loading story title...</p>
+</div>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Loading the magical story content...</p>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Preparing the next chapter of your adventure...</p>
+<p class="text-[#1c130d] text-base font-normal leading-normal pb-3 pt-1 px-4">Almost there, the characters are getting ready...</p>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

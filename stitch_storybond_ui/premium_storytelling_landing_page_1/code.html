@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryBond | Your Child Is the Hero</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#f97415",
+                "background-light": "#FFF9F0",
+                "background-dark": "#23170f",
+                "neutral-dark": "#1F2937",
+                "neutral-muted": "#6B7280",
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-neutral-dark selection:bg-primary/30">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background-light/80 backdrop-blur-md border-b border-primary/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xl">book_5</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-neutral-dark">StoryBond</span>
+</div>
+<div class="flex items-center gap-8">
+<a class="hidden md:block text-sm font-medium text-neutral-muted hover:text-primary transition-colors" href="#">How it works</a>
+<a class="hidden md:block text-sm font-medium text-neutral-muted hover:text-primary transition-colors" href="#">Pricing</a>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 border border-primary/20 text-neutral-dark text-sm font-semibold hover:bg-primary/5 transition-all">
+                    Login
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-48 pb-24 md:pt-64 md:pb-40 px-6">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
+                Now available in 20+ languages
+            </span>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold text-neutral-dark leading-[1.1] tracking-tight mb-8">
+                Your Child Is the Hero of Their Own Story
+            </h1>
+<p class="text-lg md:text-xl text-neutral-muted max-w-2xl mb-12 leading-relaxed">
+                Personalized bedtime stories in their language, in under 30 seconds. Build confidence and wonder with every page.
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-6">
+<button class="bg-primary text-white font-semibold text-base h-12 px-8 rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+                    Create Their Story
+                </button>
+<a class="flex items-center gap-2 text-neutral-dark font-semibold group" href="#">
+                    See how it works 
+                    <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Hero Product Preview -->
+<section class="px-6 pb-40">
+<div class="max-w-6xl mx-auto">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/40 aspect-[16/10] bg-neutral-100" data-alt="A young child reading a digital storybook with magical glowing elements" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1WHHe8coJncQbrjdz7HCR7XnC2WSIDJSdGV3VUD4iO9LUzJB2NQPCwILoQ0VUMiAPc2X9z25cJDFNhr4CypU2naWcXSzmD4T0Y--5CVLvjK3H5aB3y-LgBBn_g1m0rRupBGwDoBp3wxxGZgw2182vp6cn5Vj_CunbrewbJs67BWwyStoTI3eQ_O7Qn2grC3zlYqezosl7TL8z0teiAhdAN74K0qKRjj6PilrCiNoUd5XDVCB0Mjh8G9sU3vf8_vwSFVRd9nr7u5BU'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/40 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-24">
+<h2 class="text-3xl md:text-4xl font-semibold text-neutral-dark mb-4">Magic in Every Word</h2>
+<p class="text-neutral-muted max-w-xl mx-auto">Designed for busy parents who want to create lasting memories through intentional storytelling.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+<!-- Feature 1 -->
+<div class="flex flex-col items-center text-center px-4">
+<div class="size-16 rounded-2xl bg-background-light flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h3 class="text-xl font-semibold mb-4">Instant Generation</h3>
+<p class="text-neutral-muted leading-relaxed text-sm">
+                        No more waiting. Go from a simple prompt to a fully illustrated, personalized story in under 30 seconds.
+                    </p>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col items-center text-center px-4">
+<div class="size-16 rounded-2xl bg-background-light flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-3xl">translate</span>
+</div>
+<h3 class="text-xl font-semibold mb-4">Multilingual Support</h3>
+<p class="text-neutral-muted leading-relaxed text-sm">
+                        Connect deeper by sharing stories in your native tongue. Supported in over 20 languages including Spanish, French, and Mandarin.
+                    </p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-center text-center px-4">
+<div class="size-16 rounded-2xl bg-background-light flex items-center justify-center mb-8 text-primary">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+<h3 class="text-xl font-semibold mb-4">Values-Driven</h3>
+<p class="text-neutral-muted leading-relaxed text-sm">
+                        Our AI is tuned to weave in lessons of empathy, courage, and kindness, making every story a growth opportunity.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Showcase Section -->
+<section class="py-40 bg-background-light overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="order-2 md:order-1">
+<div class="relative">
+<div class="aspect-[4/5] rounded-3xl bg-neutral-200 shadow-xl overflow-hidden" data-alt="A beautifully bound book with magical light coming from between the pages" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcG_FI7PjqsJBuCY9PLzaJCkgmzYs6Ruj77l7sIitiqgFEAG7iN8x2Nya4aSjbYMBBa_BaieZ_Ki_2vw-ZocQV_t-K29s8z_uuWpyB1STPv8znsrw_Tyh-tPg3JUY1Sp4tm17M9g6mg_o3DdoSV79kFjl6x8JrfCYLDTRk9WrYwyspRftF3-G03Ap7cdE1ABZRWM-F9sO8cvaNRdIet5gEqhrGXG83VC9u7_ytgNBGXdYnidPIZO5T8seYTLGxJJzh-HcaNmufob-L'); background-size: cover;">
+</div>
+<div class="absolute -bottom-10 -right-10 bg-white p-6 rounded-2xl shadow-xl hidden lg:block border border-primary/10">
+<div class="flex items-center gap-4 mb-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">LB</div>
+<div>
+<p class="text-sm font-bold">Leo's Brave Adventure</p>
+<p class="text-xs text-neutral-muted">Chapter 1: The Golden Tree</p>
+</div>
+</div>
+<div class="h-1.5 w-48 bg-neutral-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">Personalization Engine</span>
+<h2 class="text-3xl md:text-5xl font-semibold mb-8 leading-tight">Every detail tailored to your little one.</h2>
+<ul class="space-y-8">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-bold text-lg mb-1">Character Appearance</p>
+<p class="text-neutral-muted">Define hair color, eye color, and favorite clothes so they truly see themselves.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-bold text-lg mb-1">Specific Life Lessons</p>
+<p class="text-neutral-muted">Choose a theme like "Sharing" or "Overcoming Fear" to guide the narrative.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-bold text-lg mb-1">Family Cameos</p>
+<p class="text-neutral-muted">Incorporate siblings, pets, or grandparents as supporting characters in the journey.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-40 bg-white">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-5xl font-semibold mb-8 leading-tight">Start Their Adventure Today</h2>
+<p class="text-xl text-neutral-muted mb-12 max-w-2xl mx-auto">Join thousands of families who have turned bedtime into a moment of pure magic and connection.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="w-full sm:w-auto bg-primary text-white font-semibold text-lg h-14 px-10 rounded-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    Get Started Now
+                </button>
+<p class="text-sm font-medium text-neutral-muted">First story is free. No credit card required.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-20 bg-background-light border-t border-primary/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="flex items-center gap-2">
+<div class="bg-primary/10 p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">book_5</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-neutral-dark">StoryBond</span>
+</div>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-6">
+<a class="text-sm font-medium text-neutral-muted hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-medium text-neutral-muted hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-medium text-neutral-muted hover:text-primary transition-colors" href="#">Contact Us</a>
+</div>
+<div class="flex gap-6">
+<a class="size-10 rounded-full border border-primary/10 flex items-center justify-center text-neutral-muted hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full border border-primary/10 flex items-center justify-center text-neutral-muted hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+</div>
+</div>
+<div class="mt-16 text-center text-sm text-neutral-muted/60">
+                © 2024 StoryBond. All rights reserved. Crafted with care for the next generation.
+            </div>
+</div>
+</footer>
+</body></html>
